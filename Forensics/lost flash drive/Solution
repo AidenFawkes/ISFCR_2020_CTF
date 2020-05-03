@@ -1,0 +1,24 @@
+system:
+manjaro (should work on any linux distro)
+
+commands used:
+file
+fdisk
+mount 
+mkdir
+
+>> file lost_drive
+
+will show its a dos/mbr partition
+we cant mount directly because of MBR, we have to find offset
+
+>> fdisk -l lost_drive
+
+start position is 2 and sector size is 512 so we can get offset as 2*512 = 1024
+
+>> mkdir /mnt/windows
+to make a windows folder to mount in
+
+>> mount -o loop,offset=1024 lost_drive /mnt/windows
+
+then navigate to mnt/windows and see the folders and files, extract a zip called passwords and the ctf is in it
