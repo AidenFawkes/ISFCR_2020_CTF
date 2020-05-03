@@ -21,4 +21,4 @@ to make a windows folder to mount in
 
 >> mount -o loop,offset=1024 lost_drive /mnt/windows
 
-then navigate to mnt/windows and see the folders and files, extract a zip called passwords and the ctf is in it
+then navigate to mnt/windows and see the folders and files, extract a zip called passwords and the ctf is in it 
